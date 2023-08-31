@@ -35,8 +35,7 @@ int findmaxcompare(int a) {
 int iscompare(int z) {
     int i = 2;
     int flag = 1;
-    while (i < z)
-    {
+    while (i < z) {
         if (!(reminder(z, i))) {
             flag = 0; // меняем флаг если число составное
             break; // сразу выходим из цикла
@@ -48,8 +47,7 @@ int iscompare(int z) {
 
 int div(int dividend, int divisor) {
     int i = 0;
-    while (dividend > 0)
-    {
+    while (dividend > 0) {
         dividend -= divisor;
         i++; 
     }
@@ -58,8 +56,7 @@ int div(int dividend, int divisor) {
 
 int reminder(int dividend, int divisor) {
     int i = 0;
-    while (dividend > 0)
-    {
+    while (dividend > 0) {
         dividend -= divisor;
         i++; 
     }

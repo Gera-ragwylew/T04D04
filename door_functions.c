@@ -45,9 +45,9 @@ int main() {
             A[z][i] = '*';
         }
         if(i > 12 && i < 31) 
-            printf("%d %.7lf | %.7lf | %.7lf | %.7lf\n", i, Pi, VA, LB, QG);
+            printf("%.7lf | %.7lf | %.7lf | %.7lf\n", Pi, VA, LB, QG);
         else
-            printf("%d %.7lf | %.7lf | - | %.7lf\n", i, Pi, VA, QG);
+            printf("%.7lf | %.7lf | - | %.7lf\n", Pi, VA, QG);
         Pi +=deltaX;
     }
 

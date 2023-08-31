@@ -21,7 +21,6 @@ int main(int argc, char **argv) {
 }
 
 void code() {
-    char A[100] = {0};
     char a = 0;
     char c = ' ';
     for (int i = 0; c != '\n'; i += 2) {
@@ -29,20 +28,16 @@ void code() {
         if (c != ' ' && c != '\n') {
             printf("n/a");
             return;
+        } else {
+            if(c == ' ')
+                printf("%X%c", a, c);
+            else
+                printf("%X", a);
         }
-        A[i] = a;
-        A[i + 1] = c;
-    }
-    for (int i = 0; A[i] != '\n'; i++) {
-        if (A[i] != ' ')
-            printf("%X", A[i]);
-        else
-            printf("%c", A[i]);
     }
 }
 
 void decode() {
-    char B[100];
     unsigned a = 1;
     char c = ' ';
     for (int i = 0; c != '\n'; i += 2) {
@@ -50,11 +45,11 @@ void decode() {
         if ((int)a < 33 || (int)a > 127) {
             printf("n/a");
             return;
+        } else {
+            if(c == ' ')
+                printf("%c%c", a, c);
+            else
+                printf("%c", a);
         }
-        B[i] = (char)a;
-        B[i + 1] = c;
-    }
-    for (int i = 0; B[i] != '\n'; i++) {
-        printf("%c", B[i]);
     }
 }
